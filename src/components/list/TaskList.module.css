@@ -1,0 +1,67 @@
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center; /* 🔹 Mantém tudo alinhado verticalmente */
+  justify-content: flex-start; /* 🔹 Evita que os itens se afastem demais */
+  gap: 12px; /* 🔹 Espaçamento uniforme entre checkbox e texto */
+  width: 100%;
+  background-color: var(--gray-500);
+  color: var(--gray-100);
+  padding: 12px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.checkbox {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--blue-dark); /* 🔹 Borda azul escuro */
+  border-radius: 50%; /* 🔹 Checkbox redondo */
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.checkbox:checked {
+  background-color: var(--purple-dark); /* 🔹 Fundo roxo quando marcado */
+  border-color: var(--purple-dark);
+  position: relative;
+}
+
+/* 🔹 Criando o V branco dentro quando marcado */
+.checkbox:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+.deleteButton {
+  margin-left: auto; /* 🔹 Alinha o botão à direita */
+  background: transparent;
+  border: none;
+  color: var(--gray-300);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.deleteButton:hover {
+  color: red;
+}

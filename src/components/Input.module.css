@@ -1,0 +1,19 @@
+.container { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: -15px;  
+  width: 100%;
+  max-width: 500px;
+  flex: 1;
+  height: 40px;
+  padding: 10px;
+  color: var(--gray-300);
+  background-color: var(--gray-500);
+  border-radius: 5px;
+  padding-left: 15px;
+  border: none;
+  outline: none;
+  min-width: 250px;
+}
